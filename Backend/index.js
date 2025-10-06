@@ -8,7 +8,6 @@ import messageRoute from "./routes/message.route.js";
 import {app,server} from "./SocketIO/server.js";
 
 
-
 dotenv.config();
 
 // middleware
@@ -29,6 +28,7 @@ try {
 //routes
 app.use("/api/user", userRoute);
 app.use("/api/message", messageRoute);
+
 
 server.listen(PORT, () => {
   console.log(`Server is Running on port ${PORT}`);
